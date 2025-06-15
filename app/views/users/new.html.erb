@@ -1,18 +1,18 @@
-<%= form_tag("/users", method: :post) do %>
+<%= form_with model: @user do |form| %>
     <div>
-        <%= label_tag(:username, "Username") %>
-        <%= text_field_tag(:username) %>
+        <%= form.label :username, "Username" %>
+        <%= form.text_field :username, required: true, placeholder: "Username", minlength: 4, maxlength: 10 %>
     </div>
 
     <div>
-        <%= label_tag(:email, "Email") %>
-        <%= email_field_tag(:email) %>
+        <%= form.label :email, "Email" %>
+        <%= form.email_field :email, required: true, placeholder: "j.doe@examp.le" %>
     </div>
 
     <div>
-        <%= label_tag(:password, "Password") %>
-        <%= password_field_tag(:password) %>
+        <%= form.label :password, "Password" %>
+        <%= form.password_field :password, required: true, placeholder: "Password" %>
     </div>
 
-    <%= submit_tag("Submit") %>
+    <%= form.submit %>
 <% end %>
