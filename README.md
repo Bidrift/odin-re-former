@@ -1,24 +1,7 @@
-# README
+# Re-Former app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple form demonstration app suggested by the Odin Project. It implements a simple form where you can create or edit users.
 
-Things you may want to cover:
+Rails version: `8.0.2`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Database: `SQLite3`
