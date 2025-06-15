@@ -1,0 +1,25 @@
+<%= form_with model: @user do |form| %>
+    <div>
+        <%= form.label :username, "Username" %>
+        <%= form.text_field :username, required: true, placeholder: "Username", minlength: 4, maxlength: 10 %>
+    </div>
+
+    <div>
+        <%= form.label :email, "Email" %>
+        <%= form.email_field :email, required: true, placeholder: "j.doe@examp.le" %>
+    </div>
+
+    <div>
+        <%= form.label :password, "Password" %>
+        <%= form.password_field :password, required: true, placeholder: "Password" %>
+    </div>
+
+    <div>
+        <% if @user.errors.any? %>
+            <% @user.errors.full_messages.each do |message| %>
+                <p><%= message %></p>
+            <% end %>
+        <% end %>
+    </div>
+    <%= form.submit %>
+<% end %>
